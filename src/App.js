@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
 import IntroLogin from "./startScreens/IntroLogin";
@@ -21,6 +21,17 @@ const StartScreenBg = styled.div`
   height: 100vh;
 `;
 
+const MainScreenBg = styled.div`
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: inset 50.282vw 0 #1e2338;
+`;
+
 const ModalBg = styled.div`
   position: relative;
   width: 926.8090032154px;
@@ -28,7 +39,7 @@ const ModalBg = styled.div`
   top: 50%;
   left: 50%;
   background-color: #1e2338;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.8);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-radius: 5px;
   overflow: hidden;
@@ -91,49 +102,55 @@ class App extends Component {
   render() {
     const { currentTheme } = this.state;
     return (
-      <StartScreenBg>
+      <Fragment>
         <Route exact path="/" render={() => <Redirect to="/intro/1" />} />
         <Route
           path="/intro"
           render={({ location }) => {
             const currentProgress = mapLocationToProgress(location);
             return (
-              <ModalBg>
-                <Route exact path="/intro/1" component={IntroLogin} />
-                <Route exact path="/intro/2" component={IntroHeadlines} />
-                <Route exact path="/intro/3" component={IntroBold} />
-                <Route
-                  exact
-                  path="/intro/4"
-                  render={({ history }) => (
-                    <IntroThemes
-                      history={history}
-                      currentTheme={currentTheme}
-                      changeCurrentTheme={this.changeCurrentTheme}
-                    />
-                  )}
-                />
-                <Route
-                  exact
-                  path="/intro/5"
-                  render={({ history }) => (
-                    <IntroLoading
-                      history={history}
-                      currentTheme={currentTheme}
-                    />
-                  )}
-                />
-                <ProgressBar progress={currentProgress} />
-              </ModalBg>
+              <StartScreenBg>
+                <ModalBg>
+                  <Route exact path="/intro/1" component={IntroLogin} />
+                  <Route exact path="/intro/2" component={IntroHeadlines} />
+                  <Route exact path="/intro/3" component={IntroBold} />
+                  <Route
+                    exact
+                    path="/intro/4"
+                    render={({ history }) => (
+                      <IntroThemes
+                        history={history}
+                        currentTheme={currentTheme}
+                        changeCurrentTheme={this.changeCurrentTheme}
+                      />
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/intro/5"
+                    render={({ history }) => (
+                      <IntroLoading
+                        history={history}
+                        currentTheme={currentTheme}
+                      />
+                    )}
+                  />
+                  <ProgressBar progress={currentProgress} />
+                </ModalBg>
+              </StartScreenBg>
             );
           }}
         />
         <Route
           exact
           path="/main"
-          render={() => <MainScreen currentTheme={currentTheme} />}
+          render={() => (
+            <MainScreenBg>
+              <MainScreen currentTheme={currentTheme} />
+            </MainScreenBg>
+          )}
         />
-      </StartScreenBg>
+      </Fragment>
     );
   }
 }

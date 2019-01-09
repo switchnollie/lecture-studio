@@ -9,7 +9,7 @@ class IntroLoading extends Component {
   render() {
     return (
       <MockedBgSmall src={MockPicture}>
-        <div class="lds-ellipsis">
+        <div className="lds-ellipsis">
           <div />
           <div />
           <div />
