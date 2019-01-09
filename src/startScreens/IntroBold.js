@@ -5,12 +5,23 @@ import { ButtonHotspot, LightTextInputHotspot } from "../shared/hotspots";
 import MockPicture from "../img/startscreen3.png";
 import styled from "styled-components";
 import CheckIcon from "../img/checkIcon.svg";
+import ArrowButton from "../shared/ArrowButton";
 
-const NextButtonHotspot = styled(ButtonHotspot)`
+const NextButton = styled(ButtonHotspot)`
   left: 804px;
   top: 517px;
   width: 47px;
   height: 40px;
+  svg {
+    height: 34px;
+    width: 34px;
+  }
+  &:active {
+    svg path {
+      fill: rgba(116, 197, 243, 0.7);
+    }
+    color: rgba(116, 197, 243, 0.7);
+  }
 `;
 
 const ExerciseTextField = styled(LightTextInputHotspot)`
@@ -64,7 +75,9 @@ class IntroBold extends Component {
         />
         {checkShown && <img src={CheckIcon} style={imageStyles} alt="check" />}
         <Link to="/intro/4">
-          <NextButtonHotspot />
+          <NextButton>
+            <ArrowButton />
+          </NextButton>
         </Link>
       </MockedBgSmall>
     );

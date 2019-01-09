@@ -14,6 +14,71 @@ code {
     monospace;
 }
 
+.plusBtn {
+  position: absolute;
+  bottom: 24px;
+  left: 614px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.plusBtn .cls-1 {
+  fill: url(#radial-gradient);
+}
+
+.plusBtn .cls-2 {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 3px;
+}
+
+.plusBtn .cls-3 {
+  filter: url(#Ellipse_1);
+}
+
+.buttonMenu {
+  position: absolute;
+  bottom: 60px;
+  left: 544px;
+  width: 81px;
+  height: 39px;
+  cursor: pointer;
+}
+
+.buttonMenu .cls-1 {
+  fill: #374267;
+  stroke: #374267;
+  stroke-width: 10px;
+}
+
+.buttonMenu .cls-1,
+.cls-3,
+.cls-4 {
+  stroke-linecap: round;
+}
+
+.buttonMenu .cls-1,
+.cls-4 {
+  stroke-linejoin: round;
+}
+
+.buttonMenu .cls-2 {
+  opacity: 0.72;
+}
+
+.buttonMenu .cls-3,
+.cls-4 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.buttonMenu .cls-5 {
+  filter: url(#Vereinigungsmenge_2);
+}
+
 .lds-ellipsis {
   display: inline-block;
   position: absolute;
