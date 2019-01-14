@@ -9,17 +9,17 @@ import ButtonMenu from "./ButtonMenu";
 
 const RenderedDiv = styled.div`
   position: absolute;
-  left: 727px;
-  top: 369px;
-  width: 645px;
-  height: 390px;
-  padding: 0px 44px;
+  left: 51.94%;
+  top: 46.1%;
+  width: 46.4%;
+  height: 53.3%;
+  padding: 0 3.22%;
   box-sizing: border-box;
   border: none;
   background: transparent;
   color: #464646;
   outline: none;
-  font-size: 11.35px;
+  font-size: 1.46vh;
   font-family: "CMU Serif";
 `;
 

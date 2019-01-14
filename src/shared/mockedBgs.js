@@ -15,7 +15,8 @@ export const MockedBgSmall = styled.div`
 
 export const MockedBg = styled.div`
   position: relative;
-  width: 100vw;
+  margin: 0 auto;
+  width: calc(100vh * 1.7777777778);
   height: 100vh;
   top: 0;
   left: 0;

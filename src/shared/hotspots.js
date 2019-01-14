@@ -18,17 +18,17 @@ export const LightTextInputHotspot = styled.input`
 
 export const DarkTextareaHotspot = styled.textarea`
   position: absolute;
-  left: 30px;
-  top: 401px;
-  width: 645px;
-  height: 390px;
-  padding: 0px 40px;
+  left: 2%;
+  top: 50.03%;
+  width: 46.3%;
+  height: 48%;
+  padding: 0px 3%;
   box-sizing: border-box;
   border: none;
   background: transparent;
   color: #c0c2c7;
   outline: none;
-  font-size: 11.35px;
+  font-size: 1.46vh;
   font-family: "Fira Code";
 `;
 

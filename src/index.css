@@ -16,10 +16,10 @@ code {
 
 .plusBtn {
   position: absolute;
-  bottom: 24px;
-  left: 614px;
-  width: 50px;
-  height: 50px;
+  bottom: 1%;
+  left: 44.2%;
+  width: 3.525%;
+  height: 6.267%;
   cursor: pointer;
 }
 
@@ -40,10 +40,10 @@ code {
 
 .buttonMenu {
   position: absolute;
-  bottom: 60px;
-  left: 544px;
-  width: 81px;
-  height: 39px;
+  bottom: 6%;
+  left: 39.3%;
+  width: 5.71%;
+  height: 4.888%;
   cursor: pointer;
 }
 
