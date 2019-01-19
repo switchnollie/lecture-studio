@@ -46,7 +46,7 @@ export default function IntroThemes({
 }) {
   function handleCardClick(newVal) {
     changeCurrentTheme(newVal);
-    setTimeout(() => history.push("/intro/5"), 400);
+    setTimeout(() => history.push("/intro/6"), 400);
   }
   return (
     <MockedBgSmall src={MockPicture}>

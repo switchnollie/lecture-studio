@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MockedBgSmall } from "../shared/mockedBgs";
 import { ButtonHotspot, LightTextInputHotspot } from "../shared/hotspots";
-import MockPicture from "../img/startscreen0.png";
+import MockPicture from "../img/startscreen1.png";
 import styled from "styled-components";
 import ArrowButton from "../shared/ArrowButton";
 
 const LoginButtonHotspot = styled(ButtonHotspot)`
-  left: 685px;
+  left: 755px;
   top: 522px;
-  width: 157px;
+  width: 87px;
   height: 34px;
   color: #74c5f3;
   font-size: 20px;
@@ -30,27 +30,19 @@ const LoginButtonHotspot = styled(ButtonHotspot)`
   }
 `;
 
-const PasswordInput = styled(LightTextInputHotspot)`
+const CodeInput = styled(LightTextInputHotspot)`
   left: 266px;
-  top: 312px;
-  width: 394px;
-  height: 35px;
-`;
-
-const EmailInput = styled(LightTextInputHotspot)`
-  left: 266px;
-  top: 262px;
+  top: 313px;
   width: 394px;
   height: 35px;
 `;
 
 export default () => (
   <MockedBgSmall src={MockPicture}>
-    <EmailInput type="text" required />
-    <PasswordInput type="password" required />
-    <Link to="/intro/2">
+    <CodeInput type="text" required />
+    <Link to="/intro/3">
       <LoginButtonHotspot>
-        <span>Anmelden</span>
+        <span>OK</span>
         <ArrowButton />
       </LoginButtonHotspot>
     </Link>

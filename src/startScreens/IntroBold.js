@@ -74,7 +74,7 @@ class IntroBold extends Component {
           required
         />
         {checkShown && <img src={CheckIcon} style={imageStyles} alt="check" />}
-        <Link to="/intro/4">
+        <Link to="/intro/5">
           <NextButton>
             <ArrowButton />
           </NextButton>

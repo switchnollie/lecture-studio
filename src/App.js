@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Route, Redirect } from "react-router-dom";
 import IntroLogin from "./startScreens/IntroLogin";
+import IntroLoginSms from "./startScreens/IntroLoginSms";
 import IntroHeadlines from "./startScreens/IntroHeadlines";
 import IntroBold from "./startScreens/IntroBold";
 import IntroThemes from "./startScreens/IntroThemes";
@@ -75,15 +76,18 @@ const mapLocationToProgress = location => {
       progress = 0;
       break;
     case "/intro/2":
-      progress = 0.25;
+      progress = 0.2;
       break;
     case "/intro/3":
-      progress = 0.5;
+      progress = 0.4;
       break;
     case "/intro/4":
-      progress = 0.75;
+      progress = 0.6;
       break;
     case "/intro/5":
+      progress = 0.8;
+      break;
+    case "/intro/6":
       progress = 1;
       break;
     default:
@@ -112,11 +116,12 @@ class App extends Component {
               <StartScreenBg>
                 <ModalBg>
                   <Route exact path="/intro/1" component={IntroLogin} />
-                  <Route exact path="/intro/2" component={IntroHeadlines} />
-                  <Route exact path="/intro/3" component={IntroBold} />
+                  <Route exact path="/intro/2" component={IntroLoginSms} />
+                  <Route exact path="/intro/3" component={IntroHeadlines} />
+                  <Route exact path="/intro/4" component={IntroBold} />
                   <Route
                     exact
-                    path="/intro/4"
+                    path="/intro/5"
                     render={({ history }) => (
                       <IntroThemes
                         history={history}
@@ -127,7 +132,7 @@ class App extends Component {
                   />
                   <Route
                     exact
-                    path="/intro/5"
+                    path="/intro/6"
                     render={({ history }) => (
                       <IntroLoading
                         history={history}

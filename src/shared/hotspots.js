@@ -32,6 +32,22 @@ export const DarkTextareaHotspot = styled.textarea`
   font-family: "Fira Code";
 `;
 
+export const LightTextareaHotspot = styled.textarea`
+  position: absolute;
+  left: 2%;
+  top: 54.73%;
+  width: 46.3%;
+  height: 44.2%;
+  padding: 0px 3%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  color: #000;
+  outline: none;
+  font-size: 1.56vh;
+  font-family: "Fira Code";
+`;
+
 export const ButtonHotspot = styled.button`
   cursor: pointer;
   position: absolute;

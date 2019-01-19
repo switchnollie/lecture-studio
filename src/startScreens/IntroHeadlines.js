@@ -65,7 +65,7 @@ class IntroHeadlines extends Component {
           required
         />
         {checkShown && <img src={CheckIcon} style={imageStyles} alt="check" />}
-        <Link to="/intro/3">
+        <Link to="/intro/4">
           <NextButton>
             <ArrowButton />
           </NextButton>

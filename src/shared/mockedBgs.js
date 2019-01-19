@@ -18,8 +18,9 @@ export const MockedBg = styled.div`
   margin: 0 auto;
   width: calc(100vh * 1.7777777778);
   height: 100vh;
-  top: 0;
-  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
   background-image: url(${props => props.src});
   background-size: contain;
   background-repeat: no-repeat;

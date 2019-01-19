@@ -17,9 +17,9 @@ code {
 .plusBtn {
   position: absolute;
   bottom: 1%;
-  left: 44.2%;
-  width: 3.525%;
-  height: 6.267%;
+  left: 43.2%;
+  width: 4.525%;
+  height: 7.267%;
   cursor: pointer;
 }
 
@@ -40,8 +40,8 @@ code {
 
 .buttonMenu {
   position: absolute;
-  bottom: 6%;
-  left: 39.3%;
+  bottom: 6.4%;
+  left: 38.7%;
   width: 5.71%;
   height: 4.888%;
   cursor: pointer;
